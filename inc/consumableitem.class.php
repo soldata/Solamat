@@ -197,11 +197,11 @@ class ConsumableItem extends CommonDBTM {
                                     'value'     => $this->fields['groups_id_tech'],
                                     'entity'    => $this->fields['entities_id'],
                                     'condition' => '`is_assign`'));
-      echo "</td></tr>\n";
+      echo "</td></tr>\n";*/
 
       echo "<tr class='tab_bg_1'>";
       echo "<td>".$LANG['consumables'][36]."&nbsp;:</td>";
-      echo "<td>"; */
+      echo "<td>"; 
       Dropdown::show('Location', array('value'  => $this->fields["locations_id"],
                                        'entity' => $this->fields["entities_id"]));
       echo "</td></tr>";
