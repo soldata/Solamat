@@ -3,9 +3,9 @@
                 
  var $dbhost = 'localhost';
                 
- var $dbuser 	= 'solamat';
+ var $dbuser 	= 'root';
                 
- var $dbpassword= 'solamat';
+ var $dbpassword= '';
                 
  var $dbdefault	= 'solamat';
                 

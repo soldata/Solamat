@@ -881,10 +881,10 @@ class Infocom extends CommonDBChild {
             }
             echo "</td>";
             if (Session::haveRight("budget","r")) {
-               echo "<td>".$LANG['financial'][87]."&nbsp;:</td><td >";
+    /*          echo "<td>".$LANG['financial'][87]."&nbsp;:</td><td >";
                Dropdown::show('Budget', array('value'    => $ic->fields["budgets_id"],
                                               'entity'   => $item->getEntityID(),
-                                              'comments' => 1));
+                                              'comments' => 1));*/
             } else {
                echo "<td colspan='2'>";
             }
@@ -893,7 +893,7 @@ class Infocom extends CommonDBChild {
             // Can edit calendar ?
             $editcalendar = ($withtemplate!=2);
 
-            echo "<tr class='tab_bg_1'>";
+    /*        echo "<tr class='tab_bg_1'>";
             echo "<td>".$LANG['financial'][18]."&nbsp;:</td>";
             echo "<td >";
             Html::autocompletionTextField($ic, "order_number", array('option' => $option));
@@ -909,12 +909,12 @@ class Infocom extends CommonDBChild {
                                    'Infocom', $item->getEntityID());
             Html::autocompletionTextField($ic, "immo_number", array('value'  => $objectName,
                                                               'option' => $option));
-            echo "</td>";
+            echo "</td>";*/
             echo "<td>".$LANG['financial'][14]."&nbsp;:</td><td>";
             Html::showDateFormItem("buy_date", $ic->fields["buy_date"], true, $editcalendar);
             echo "</td></tr>";
 
-            echo "<tr class='tab_bg_1'>";
+    /*      echo "<tr class='tab_bg_1'>";
             echo "<td>".$LANG['financial'][82]."&nbsp;:</td>";
             echo "<td>";
             Html::autocompletionTextField($ic, "bill", array('option' => $option));
@@ -922,25 +922,25 @@ class Infocom extends CommonDBChild {
             echo "<td>".$LANG['financial'][27]."&nbsp;:</td><td>";
             Html::showDateFormItem("delivery_date", $ic->fields["delivery_date"], true,
                                    $editcalendar);
-            echo "</td></tr>";
+            echo "</td></tr>";*/
 
             echo "<tr class='tab_bg_1'>";
             echo "<td>".$LANG['financial'][19]."&nbsp;:</td><td>";
             Html::autocompletionTextField($ic, "delivery_number", array('option' => $option));
             echo "</td>";
-            echo "<td>".$LANG['financial'][76]."&nbsp;:</td><td>";
+    /*      echo "<td>".$LANG['financial'][76]."&nbsp;:</td><td>";
             Html::showDateFormItem("use_date",$ic->fields["use_date"], true, $editcalendar);
-            echo "</td></tr>";
+            echo "</td></tr>";*/
 
             echo "<tr class='tab_bg_1'>";
             echo "<td>".$LANG['financial'][21]."&nbsp;:</td>";
             echo "<td><input type='text' name='value' $option value='".
                   Html::formatNumber($ic->fields["value"], true)."' size='14'></td>";
             echo "</td>";
-            echo "<td>".$LANG['financial'][114]."&nbsp;:</td><td>";
+    /*      echo "<td>".$LANG['financial'][114]."&nbsp;:</td><td>";
             Html::showDateFormItem("inventory_date",$ic->fields["inventory_date"], true,
                                    $editcalendar);
-            echo "</td></tr>";
+            echo "</td></tr>";*/
 
             echo "<tr class='tab_bg_1'>";
             echo "<td>".$LANG['financial'][78]."&nbsp;:</td>";
@@ -951,7 +951,7 @@ class Infocom extends CommonDBChild {
             echo "<textarea cols='45' rows='9' name='comment' >".$ic->fields["comment"];
             echo "</textarea></td></tr>\n";
 
-            echo "<tr class='tab_bg_1'>";
+    /*      echo "<tr class='tab_bg_1'>";
             echo "<td>".$LANG['financial'][81]."&nbsp;:</td><td>";
             echo Html::formatNumber(self::Amort($ic->fields["sink_type"], $ic->fields["value"],
                                                    $ic->fields["sink_time"],
@@ -1038,14 +1038,14 @@ class Infocom extends CommonDBChild {
             echo "<td>".$LANG['financial'][16]."&nbsp;:</td>";
             echo "<td >";
             Html::autocompletionTextField($ic, "warranty_info", array('option' => $option));
-            echo "</td>";
+            echo "</td>";*/
 
             if ($CFG_GLPI['use_mailing']) {
-               echo "<td>".$LANG['setup'][247]."&nbsp;:</td>";
+    /*         echo "<td>".$LANG['setup'][247]."&nbsp;:</td>";
                echo "<td>";
                echo self::dropdownAlert("alert", $ic->fields["alert"]);
                Alert::displayLastAlert('Infocom', $ic->fields['id']);
-               echo "</td>";
+               echo "</td>";*/
             } else {
                echo "</td><td colspan='2'>";
             }

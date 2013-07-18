@@ -3711,7 +3711,7 @@ class Ticket extends CommonITILObject {
          Html::showDateTimeFormItem("due_date", $this->fields["due_date"], 1, false, $canupdate);
          echo $tt->getEndHiddenFieldValue('due_date',$this);
          echo "</td>";
-    /*     if ($canupdate) {
+         if ($canupdate) {
             echo "<td class='nopadding'>".$tt->getBeginHiddenFieldText('slas_id').$LANG['sla'][1]."&nbsp;:".
                         $tt->getMandatoryMark('slas_id').
                         $tt->getEndHiddenFieldText('slas_id')."</td>";
@@ -3719,8 +3719,8 @@ class Ticket extends CommonITILObject {
             Dropdown::show('Sla',array('entity' => $this->fields["entities_id"],
                                        'value'  => $this->fields["slas_id"]));
             echo $tt->getEndHiddenFieldValue('slas_id',$this);
-            echo "</td>"; 
-         }*/
+            echo "</td>";
+         }
          echo "</tr></table>";
       }
 
@@ -3799,7 +3799,7 @@ class Ticket extends CommonITILObject {
          echo self::getTicketTypeName($this->fields["type"]);
       }
       echo "</td>";
-    /*  echo "<th width='$colsize3%'>".$LANG['common'][36]."&nbsp;:";
+      echo "<th width='$colsize3%'>".$LANG['common'][36]."&nbsp;:";
       echo $tt->getMandatoryMark('itilcategories_id');
       echo "</th>";
       echo "<td width='$colsize4%'>";
@@ -3843,7 +3843,7 @@ class Ticket extends CommonITILObject {
       } else {
          echo Dropdown::getDropdownName("glpi_itilcategories", $this->fields["itilcategories_id"]);
       }
-      echo "</td>";*/
+      echo "</td>";
       echo "</tr>";
 
       if (!$ID) {
@@ -3862,7 +3862,7 @@ class Ticket extends CommonITILObject {
       } else {
          echo self::getStatus($this->fields["status"]);
       }
-    /*  echo $tt->getEndHiddenFieldValue('status',$this);
+      echo $tt->getEndHiddenFieldValue('status',$this);
 
       echo "</td>";
       echo "<th width='$colsize3%'>".$tt->getBeginHiddenFieldText('requesttypes_id').$LANG['job'][44].
@@ -3928,7 +3928,7 @@ class Ticket extends CommonITILObject {
             echo TicketValidation::getStatus($this->fields['global_validation']);
          }
       }
-      echo "</td></tr>";*/
+      echo "</td></tr>";
 
       echo "<tr class='tab_bg_1'>";
       echo "<th>".$tt->getBeginHiddenFieldText('impact').$LANG['joblist'][30]."&nbsp;:".
@@ -4015,7 +4015,7 @@ class Ticket extends CommonITILObject {
       echo "</td>";
       echo "</tr>";
 
-    /*  echo "<tr class='tab_bg_1'>";
+      echo "<tr class='tab_bg_1'>";
       echo "<th>".$LANG['joblist'][2]."&nbsp;:".$tt->getMandatoryMark('priority').
            "</th>";
       echo "<td>";
@@ -4054,7 +4054,7 @@ class Ticket extends CommonITILObject {
          echo $tt->getEndHiddenFieldValue('actiontime',$this);
          echo "</td>";
          echo "</tr>";
-      }*/
+      }
       echo "</table>";
       if ($ID) {
          $this->showActorsPartForm($ID,$values);

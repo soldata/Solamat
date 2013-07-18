@@ -2324,7 +2324,7 @@ abstract class CommonITILObject extends CommonDBTM {
 
       // Manage actors : requester and assign
       echo "<table class='tab_cadre_fixe'>";
-      echo "<tr class='tab_bg_1'>";
+    /*  echo "<tr class='tab_bg_1'>";
       echo "<th rowspan='2' width='13%'>".$LANG['common'][103]."&nbsp;:</th>";
       echo "<th width='29%'>";
       if (!$is_hidden['_users_id_requester'] || !$is_hidden['_groups_id_requester']) {
@@ -2615,7 +2615,7 @@ abstract class CommonITILObject extends CommonDBTM {
          }
       }
       echo "</td>";
-      echo "</tr>";
+      echo "</tr>";*/
       echo "</table>";
    }
 
