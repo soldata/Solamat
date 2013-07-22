@@ -1151,7 +1151,7 @@ class EntityData extends CommonDBChild {
                if (Session::haveRight('entity_helpdesk','r')) {
                   $ong[4] = $LANG['title'][24];       // Helpdesk
                }
-               $ong[5] = $LANG['Menu'][38];           // Inventory
+//               $ong[5] = $LANG['Menu'][38];           // Inventory
 
                return $ong;
          }
