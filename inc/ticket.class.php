@@ -4615,7 +4615,7 @@ class Ticket extends CommonITILObject {
          echo "<tr><th>";
          switch ($status) {
             case 'waiting' :
-               echo $LANG['joblist'][13]." (".$LANG['joblist'][26].")";
+               echo $LANG['jobrecurrent'][1];
                break;
 
             case 'process' :
