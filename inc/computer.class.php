@@ -525,12 +525,12 @@ class Computer extends CommonDBTM {
       Dropdown::show('Location', array('value'  => $this->fields["locations_id"],
                                        'entity' => $this->fields["entities_id"]));
       echo "</td>"; */
-      echo "<td>".$LANG['common'][17]."&nbsp;: </td>";
-      echo "<td>";
-      Dropdown::show('ComputerType', array('value' => $this->fields["computertypes_id"]));
-      echo "</td></tr>\n";
-
-      echo "<tr class='tab_bg_1'>";
+//      echo "<td>".$LANG['common'][17]."&nbsp;: </td>";
+//      echo "<td>";
+//      Dropdown::show('ComputerType', array('value' => $this->fields["computertypes_id"]));
+//      echo "</td></tr>\n";
+//
+//      echo "<tr class='tab_bg_1'>";
     /*  echo "<td>".$LANG['common'][10]."&nbsp;: </td>";
       echo "<td>";
       User::dropdown(array('name'   => 'users_id_tech',
