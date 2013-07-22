@@ -1144,7 +1144,7 @@ class EntityData extends CommonDBChild {
             case 'Entity' :
                $ong = array();
                $ong[1] = $LANG['financial'][44];      // Address
-               $ong[2] = $LANG['entity'][14];         // Advanced
+//               $ong[2] = $LANG['entity'][14];         // Advanced
                if (Session::haveRight('notification','r')) {
                   $ong[3] = $LANG['setup'][704];      // Notification
                }
