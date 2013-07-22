@@ -226,11 +226,11 @@ class EntityData extends CommonDBChild {
 //      echo "<td>";
 //      Html::autocompletionTextField($entdata, "fax");
 //      echo "</td></tr>";
-      echo "<tr class='tab_bg_1'>";
-      echo "<td>".$LANG['financial'][45]."&nbsp;:&nbsp;</td>";
-      echo "<td>";
-      Html::autocompletionTextField($entdata, "website");
-      echo "</td></tr>";
+//      echo "<tr class='tab_bg_1'>";
+//      echo "<td>".$LANG['financial'][45]."&nbsp;:&nbsp;</td>";
+//      echo "<td>";
+//      Html::autocompletionTextField($entdata, "website");
+//      echo "</td></tr>";
 
       echo "<tr class='tab_bg_1'>";
       echo "<td>".$LANG['setup'][14]."&nbsp;:&nbsp;</td>";
