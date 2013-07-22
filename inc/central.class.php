@@ -55,9 +55,11 @@ class Central extends CommonGLPI {
       global $LANG;
 
       if ($item->getType() == __CLASS__) {
-         $tabs[1] = $LANG['central'][12]; // My
-         $tabs[2] = $LANG['central'][14]; // Group
-		 
+
+         //Permutter les deux lignes du dessous, pour mettre l'onglet Group View en premier et changer numero $tabs
+         $tabs[1] = $LANG['central'][14]; // Group
+          $tabs[2] = $LANG['central'][12]; // My
+		
 		 
          //Masquer Global View
          //$tabs[3] = $LANG['central'][13]; // Global
@@ -72,11 +74,14 @@ class Central extends CommonGLPI {
 
       if ($item->getType() == __CLASS__) {
          switch ($tabnum) {
-            case 1 : // all
+
+            //Changer le case en 2 a la place de 1
+            case 2 : // all
                $item->showMyView();
                break;
 
-            case 2 :
+            //Changer le case en 1 a la place de 2
+            case 1 :
                $item->showGroupView();
                break;
 
