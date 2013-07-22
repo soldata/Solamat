@@ -57,7 +57,10 @@ class Central extends CommonGLPI {
       if ($item->getType() == __CLASS__) {
          $tabs[1] = $LANG['central'][12]; // My
          $tabs[2] = $LANG['central'][14]; // Group
-         $tabs[3] = $LANG['central'][13]; // Global
+		 
+		 
+         //Masquer Global View
+         //$tabs[3] = $LANG['central'][13]; // Global
 
          return $tabs;
       }
