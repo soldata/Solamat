@@ -552,12 +552,12 @@ class Computer extends CommonDBTM {
                                     'condition' => '`is_assign`'));
 
       echo "</td>"; */
-      echo "<td>".$LANG['common'][22]."&nbsp;: </td>";
-      echo "<td>";
-      Dropdown::show('ComputerModel', array('value' => $this->fields["computermodels_id"]));
-      echo "</td></tr>\n";
-
-      echo "<tr class='tab_bg_1'>";
+//      echo "<td>".$LANG['common'][22]."&nbsp;: </td>";
+//      echo "<td>";
+//      Dropdown::show('ComputerModel', array('value' => $this->fields["computermodels_id"]));
+//      echo "</td></tr>\n";
+//
+//      echo "<tr class='tab_bg_1'>";
     /*  echo "<td>".$LANG['common'][21]."&nbsp;: </td>";
       echo "<td >";
       Html::autocompletionTextField($this,'contact_num');
