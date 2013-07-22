@@ -538,12 +538,12 @@ class Computer extends CommonDBTM {
                            'right'  => 'own_ticket',
                            'entity' => $this->fields["entities_id"]));
       echo "</td>"; */
-      echo "<td>".$LANG['common'][5]."&nbsp;: </td>";
-      echo "<td>";
-      Dropdown::show('Manufacturer', array('value' => $this->fields["manufacturers_id"]));
-      echo "</td></tr>\n";
-
-      echo "<tr class='tab_bg_1'>";
+//      echo "<td>".$LANG['common'][5]."&nbsp;: </td>";
+//      echo "<td>";
+//      Dropdown::show('Manufacturer', array('value' => $this->fields["manufacturers_id"]));
+//      echo "</td></tr>\n";
+//
+//      echo "<tr class='tab_bg_1'>";
     /*  echo "<td>".$LANG['common'][109]."&nbsp;:</td>";
       echo "<td>";
       Dropdown::show('Group', array('name'      => 'groups_id_tech',
