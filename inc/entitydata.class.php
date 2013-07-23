@@ -257,7 +257,8 @@ class EntityData extends CommonDBChild {
       echo "<tr class='tab_bg_1'>";
       echo "<td>".$LANG['financial'][103]."&nbsp;:&nbsp;</td>";
       echo "<td>";
-      Html::autocompletionTextField($entdata, "country");
+//      Html::autocompletionTextField($entdata, "country");
+      Html::champsCalendar($entdata, "country");
       echo "</td></tr>";
 
       if ($canedit) {
