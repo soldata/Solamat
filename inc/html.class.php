@@ -3569,6 +3569,88 @@ class Html {
     *
     * @return nothing (print out an HTML div)
    **/
+ 	  static function autocompletionTextField2(CommonDBTM $item, $field, $options=array(), $maybeempty=true, $can_edit=true, $displayYear=true) {
+      global $CFG_GLPI;
+
+      $params['name']   = $field;
+      $params['value']  = '';
+
+      if (array_key_exists($field,$item->fields)) {
+         $params['value'] = $item->fields[$field];
+      }
+      $params['size']   = 40;
+      $params['entity'] = -1;
+
+      if (array_key_exists('entities_id',$item->fields)) {
+         $params['entity'] = $item->fields['entities_id'];
+      }
+      $params['user']   = -1;
+      $params['option'] = '';
+
+      if (is_array($options) && count($options)) {
+         foreach ($options as $key => $val) {
+            $params[$key] = $val;
+         }
+      }
+
+      if ($CFG_GLPI["use_ajax"] && $CFG_GLPI["use_ajax_autocompletion"]) {
+         $rand = mt_rand();
+         $name = "field_".$params['name'].$rand;
+         echo "<input ".$params['option']." id='showdate$rand' type='text' size='10' name='".$params['name'].
+               "' value=\"".self::cleanInputText($params['value'])."\" size='".$params['size']."'>\n";
+         $output = "<script type='text/javascript' >\n";
+
+         $output .= "Ext.onReady(function() {
+         var md$rand = new Ext.ux.form.XDateField({
+            name: '$field'
+            ,value: '".self::convDate($params['value'])."'
+            ,applyTo: 'showdate$rand'
+            ,id: 'date$rand'
+            ,submitFormat:'Y-m-d'
+            ,startDay: 1";
+
+      switch ($_SESSION['glpidate_format']) {
+         case 1 :
+            $displayYear ? $format='d-m-Y' : $format='d-m';
+            break;
+
+         case 2 :
+            $displayYear ? $format='m-d-Y' : $format='m-d';
+            break;
+
+         default :
+            $displayYear ? $format='Y-m-d' : $format='m-d';
+      }
+      $output .= ",format: '".$format."'";
+
+      if ($maybeempty) {
+         $output .= ",allowBlank: true";
+      } else {
+         $output .= ",allowBlank: false";
+      }
+
+      if (!$can_edit) {
+         $output .= ",disabled: true";
+      }
+
+      if (!empty($minDate)) {
+         $output .= ",minValue: '".self::convDate($minDate)."'";
+      }
+
+      if (!empty($maxDate)) {
+         $output .= ",maxValue: '".self::convDate($maxDate)."'";
+      }
+
+      $output .= " });
+      });";
+      $output .= "</script>\n";
+      echo $output;
+
+      } else {
+         echo "<input ".$params['option']." type='text' name='".$params['name']."'
+                value=\"".self::cleanInputText($params['value'])."\" size='".$params['size']."'>\n";
+      }
+   }
    static function autocompletionTextField(CommonDBTM $item, $field, $options=array()) {
       global $CFG_GLPI;
 
