@@ -72,17 +72,18 @@ if (isset($_POST["add_several"])) {
 } else if (isset($_POST["give"])) {
    $constype->check($_POST["tID"],'w');
 
-   if ($_POST["items_id"] > 0 && !empty($_POST['itemtype'])) {
+//   if ($_POST["items_id"] > 0 && !empty($_POST['itemtype'])) {
       if (isset($_POST["out"])) {
          foreach ($_POST["out"] as $key => $val) {
-            $con->out($key,$_POST['itemtype'],$_POST["items_id"]);
+//            $con->out($key,$_POST['itemtype'],$_POST["items_id"]);
+$con->transfertBatch($key, $_POST['entities_id']);
          }
       }
-      $item = new $_POST['itemtype']();
-      $item->getFromDB($_POST["items_id"]);
-      Event::log($_POST["tID"], "consumables", 5, "inventory",
-               $_SESSION["glpiname"]." ".$LANG['log'][97]." ".$item->getNameID());
-   }
+//      $item = new $_POST['itemtype']();
+//      $item->getFromDB($_POST["items_id"]);
+//      Event::log($_POST["tID"], "consumables", 5, "inventory",
+//               $_SESSION["glpiname"]." ".$LANG['log'][97]." ".$item->getNameID());
+//   }
    Html::back();
 
 } else if (isset($_GET["restore"])) {

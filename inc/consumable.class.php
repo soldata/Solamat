@@ -126,6 +126,180 @@ class Consumable extends CommonDBTM {
     *@return boolean
     *
     **/
+//MODIF
+
+   //Fonction rechercher le nom d'une entité en informant son ID
+   function getNameEnt($id)
+   {
+       global $DB;
+       $req = "select name from glpi_entities where id='$id'";
+       $result = $DB->query($req);
+       $ligne = $DB->fetch_array($result);
+      return $ligne['0'];
+   }
+   
+
+   //Fonction pour insérer un nouveau matériel en lot dans la table glpi_consumableitems      
+   function insertNewCons($nameCons, $typeCons,$ref,$comment, $ent, $alarm)
+   {
+       global $DB;
+       $query = "insert into glpi_consumableitems values ('','$ent','$nameCons','$ref',0,'$typeCons',0,0,0,0,'$comment','$alarm',NULL)";
+       if ($result = $DB->query($query)) {
+         return true;
+      }
+      return false;
+   }
+   
+   
+   //Fonction pour avoir le nom d'un matériel en lot selon l'id
+   function getNameCons($id)
+   {
+       global $DB;
+       $req = "select name from glpi_consumableitems where id = '$id'";
+       $result = $DB->query($req);
+       $ligne = $DB->fetch_array($result);
+       return $ligne['0'];
+   }
+   
+	//Fonction pour avoir l'id du type du materiel en lot dans la table glpi_consumableitems
+   function getTypeCons($id)
+   {
+       global $DB;
+       $req = "select consumableitemtypes_id from glpi_consumableitems where id = '$id'";
+       $result = $DB->query($req);
+       $ligne = $DB->fetch_array($result);
+       return $ligne['0'];
+   }
+   //Fonction pour avoir la référence d'un matériel en lot
+   function getRefCons($id)
+   {
+       global $DB;
+       $req = "select ref from glpi_consumableitems where id = '$id'";
+       $result = $DB->query($req);
+       $ligne = $DB->fetch_array($result);
+       return $ligne['0'];
+   }
+   //Fonction pour avoir le commentaire d'un matériel en lot
+   function getCommCons($id)
+   {
+       global $DB;
+       $req = "select comment from glpi_consumableitems where id = '$id'";
+       $result = $DB->query($req);
+       $ligne = $DB->fetch_array($result);
+       return $ligne['0'];
+   }
+   //Fonction pour avoir l'alarme d'une matériel en lot
+   function getAlarmeCons($id)
+   {
+       global $DB;
+       $req = "select alarm_threshold from glpi_consumableitems where id = '$id'";
+       $result = $DB->query($req);
+       $ligne = $DB->fetch_array($result);
+       return $ligne['0'];
+   }
+   //Fonction pour avoir l'id d'un matériel en lot
+   function getIdCons($id)
+   {
+       global $DB;
+       $req = "select consumableitems_id from glpi_consumables where id = '$id'";
+       $result = $DB->query($req);
+       $ligne = $DB->fetch_array($result);
+       return $ligne['0'];
+   }
+   //Fonction pour avoir l'id d'un nouveau matériel en lot
+   function getIdConNew($name, $ent)
+   {
+       global $DB;
+       $req = "select id from glpi_consumableitems where name = '$name' and entities_id = '$ent'";
+       $result = $DB->query($req);
+       $ligne = $DB->fetch_array($result);
+       return $ligne['0'];
+   }
+   //Fonctino pour vérifier si une ligne existe déjà
+   function verifNameExist($name, $ent)
+   {
+       global $DB;
+       $req = "select name from glpi_consumableitems where name = '$name' and entities_id = '$ent'";
+       $result = $DB->query($req);
+       $ligne = $DB->fetch_array($result);
+       return $ligne['0'];
+   }
+   //Fonction pour vérifier si la ligne est delet ou non
+   function verifDeleted($name, $ent)
+   {
+       global $DB;
+       $req = "select is_deleted from glpi_consumableitems where name = '$name' and entities_id = '$ent'";
+       $result = $DB->query($req);
+       $ligne = $DB->fetch_array($result);
+       return $ligne['0'];
+   }
+   //Fonction pour mettre le delet en False
+   function setIsDeleted($name,$ent)
+   {
+       global $DB;
+       $query = " update glpi_consumableitems
+           set `is_deleted` = '0'
+               where name = '$name' 
+               and entities_id = '$ent'";
+       
+       if ($result = $DB->query($query)) {
+            return true;
+         }
+         return false;
+   }
+
+
+
+   //Requete permettant de changer l'entité d'un BATCH
+   function transfertBatch($ID, $cat){
+       
+       global $DB;
+       $test = true;
+       
+       $id = $this->getIdCons($ID);
+       
+       $name = $this->getNameCons($id);
+       
+       
+
+       $verifName = $this->verifNameExist($name, $cat);
+       
+       if(!empty($verifName))
+       {
+           
+                $delet = $this->verifDeleted($name, $cat);
+                if($delet == 1)
+                {
+                    $this->setIsDeleted($name,$cat);
+                }
+       }else{
+           
+                $typeCons = $this->getTypeCons($id);
+                $ref = $this->getRefCons($id);
+                $comment = $this->getCommCons($id);
+                $alarm = $this->getAlarmeCons($id);
+                
+                $this->insertNewCons($name, $typeCons,$ref,$comment, $cat, $alarm);
+       }
+       
+                 
+        
+       
+       $ent = $this->getNameEnt($cat);
+       $idNew = $this->getIdConNew($name, $cat);
+       if ($test) {
+           $query = " update ".$this->getTable()." 
+           set consumableitems_id = '$idNew',
+               itemtype = '$ent',
+               entities_id = '$cat'
+               where id = '$ID'";
+       
+       if ($result = $DB->query($query)) {
+            return true;
+         }
+       }
+       return false;
+   }
    function out($ID, $itemtype='', $items_id=0) {
       global $DB;
 
