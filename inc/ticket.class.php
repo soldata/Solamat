@@ -3711,7 +3711,7 @@ class Ticket extends CommonITILObject {
          Html::showDateTimeFormItem("due_date", $this->fields["due_date"], 1, false, $canupdate);
          echo $tt->getEndHiddenFieldValue('due_date',$this);
          echo "</td>";
-    /*     if ($canupdate) {
+      /*  if ($canupdate) {
             echo "<td class='nopadding'>".$tt->getBeginHiddenFieldText('slas_id').$LANG['sla'][1]."&nbsp;:".
                         $tt->getMandatoryMark('slas_id').
                         $tt->getEndHiddenFieldText('slas_id')."</td>";
@@ -3719,7 +3719,7 @@ class Ticket extends CommonITILObject {
             Dropdown::show('Sla',array('entity' => $this->fields["entities_id"],
                                        'value'  => $this->fields["slas_id"]));
             echo $tt->getEndHiddenFieldValue('slas_id',$this);
-            echo "</td>"; 
+            echo "</td>";
          }*/
          echo "</tr></table>";
       }
@@ -3862,7 +3862,7 @@ class Ticket extends CommonITILObject {
       } else {
          echo self::getStatus($this->fields["status"]);
       }
-    /*  echo $tt->getEndHiddenFieldValue('status',$this);
+     /* echo $tt->getEndHiddenFieldValue('status',$this);
 
       echo "</td>";
       echo "<th width='$colsize3%'>".$tt->getBeginHiddenFieldText('requesttypes_id').$LANG['job'][44].
@@ -4615,7 +4615,7 @@ class Ticket extends CommonITILObject {
          echo "<tr><th>";
          switch ($status) {
             case 'waiting' :
-               echo $LANG['jobrecurrent'][1];
+               echo $LANG['joblist'][13]." (".$LANG['joblist'][26].")";
                break;
 
             case 'process' :
