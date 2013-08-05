@@ -508,12 +508,12 @@ class Computer extends CommonDBTM {
       $this->showFormHeader($options);
 
       echo "<tr class='tab_bg_1'>";
-    /*  echo "<td>".$LANG['common'][16].($template?"*":"")."&nbsp;:</td>";
+      echo "<td>".$LANG['common'][19].($template?"*":"")."&nbsp;:</td>";
       echo "<td>";
       $objectName = autoName($this->fields["name"], "name", ($template === "newcomp"),
                              $this->getType(), $this->fields["entities_id"]);
       Html::autocompletionTextField($this, 'name', array('value' => $objectName));
-      echo "</td>"; */
+      echo "</td>"; 
       echo "<td>".$LANG['state'][0]."&nbsp;:</td>";
       echo "<td>";
       Dropdown::show('State', array('value' => $this->fields["states_id"]));
@@ -562,7 +562,7 @@ class Computer extends CommonDBTM {
       echo "<td >";
       Html::autocompletionTextField($this,'contact_num');
       echo "</td>"; */
-      echo "<td>".$LANG['common'][19]."&nbsp;:</td>";
+      echo "<td>".$LANG['common'][20]."&nbsp;:</td>";
       echo "<td >";
       Html::autocompletionTextField($this,'serial');
       echo "</td></tr>\n";
