@@ -769,7 +769,7 @@ class Computer extends CommonDBTM {
 
       $tab[1]['table']         = $this->getTable();
       $tab[1]['field']         = 'name';
-      $tab[1]['name']          = $LANG['common'][16];
+      $tab[1]['name']          = $LANG['common'][19];
       $tab[1]['datatype']      = 'itemlink';
       $tab[1]['itemlink_type'] = $this->getType();
       $tab[1]['massiveaction'] = false; // implicit key==1
@@ -824,7 +824,7 @@ class Computer extends CommonDBTM {
 
       $tab[5]['table']     = $this->getTable();
       $tab[5]['field']     = 'serial';
-      $tab[5]['name']      = $LANG['common'][19];
+      $tab[5]['name']      = $LANG['common'][20];
       $tab[5]['datatype']  = 'string';
 
     /*  $tab[6]['table']     = $this->getTable();
