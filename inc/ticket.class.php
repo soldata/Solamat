@@ -1778,20 +1778,20 @@ class Ticket extends CommonITILObject {
       $tab[14]['name']       = $LANG['common'][17];
       $tab[14]['searchtype'] = 'equals';
 
-      $tab[10]['table']      = $this->getTable();
-      $tab[10]['field']      = 'urgency';
-      $tab[10]['name']       = $LANG['joblist'][29];
-      $tab[10]['searchtype'] = 'equals';
+//      $tab[10]['table']      = $this->getTable();
+//      $tab[10]['field']      = 'urgency';
+//      $tab[10]['name']       = $LANG['joblist'][29];
+//      $tab[10]['searchtype'] = 'equals';
 
       $tab[11]['table']      = $this->getTable();
       $tab[11]['field']      = 'impact';
       $tab[11]['name']       = $LANG['joblist'][30];
       $tab[11]['searchtype'] = 'equals';
 
-      $tab[3]['table']      = $this->getTable();
-      $tab[3]['field']      = 'priority';
-      $tab[3]['name']       = $LANG['joblist'][2];
-      $tab[3]['searchtype'] = 'equals';
+//      $tab[3]['table']      = $this->getTable();
+//      $tab[3]['field']      = 'priority';
+//      $tab[3]['name']       = $LANG['joblist'][2];
+//      $tab[3]['searchtype'] = 'equals';
 
       $tab[15]['table']         = $this->getTable();
       $tab[15]['field']         = 'date';
@@ -1805,12 +1805,12 @@ class Ticket extends CommonITILObject {
       $tab[16]['datatype']      = 'datetime';
       $tab[16]['massiveaction'] = false;
 
-      $tab[18]['table']         = $this->getTable();
-      $tab[18]['field']         = 'due_date';
-      $tab[18]['name']          = $LANG['sla'][5];
-      $tab[18]['datatype']      = 'datetime';
-      $tab[18]['maybefuture']   = true;
-      $tab[18]['massiveaction'] = false;
+//      $tab[18]['table']         = $this->getTable();
+//      $tab[18]['field']         = 'due_date';
+//      $tab[18]['name']          = $LANG['sla'][5];
+//      $tab[18]['datatype']      = 'datetime';
+//      $tab[18]['maybefuture']   = true;
+//      $tab[18]['massiveaction'] = false;
 
       $tab[82]['table']         = $this->getTable();
       $tab[82]['field']         = 'is_late';
@@ -1851,10 +1851,10 @@ class Ticket extends CommonITILObject {
       $tab[131]['nosort']        = true;
       $tab[131]['massiveaction'] = false;
 
-      $tab[9]['table']    = 'glpi_requesttypes';
-      $tab[9]['field']    = 'name';
-      $tab[9]['name']     = $LANG['job'][44];
-      $tab[9]['datatype'] = 'dropdown';
+//      $tab[9]['table']    = 'glpi_requesttypes';
+//      $tab[9]['field']    = 'name';
+//      $tab[9]['name']     = $LANG['job'][44];
+//      $tab[9]['datatype'] = 'dropdown';
 
       $tab[80]['table']         = 'glpi_entities';
       $tab[80]['field']         = 'completename';
@@ -1863,12 +1863,12 @@ class Ticket extends CommonITILObject {
       $tab[80]['datatype']      = 'dropdown';
 
 
-      $tab[45]['table']         = $this->getTable();
-      $tab[45]['field']         = 'actiontime';
-      $tab[45]['name']          = $LANG['job'][20];
-      $tab[45]['datatype']      = 'timestamp';
-      $tab[45]['massiveaction'] = false;
-      $tab[45]['nosearch']      = true;
+//      $tab[45]['table']         = $this->getTable();
+//      $tab[45]['field']         = 'actiontime';
+//      $tab[45]['name']          = $LANG['job'][20];
+//      $tab[45]['datatype']      = 'timestamp';
+//      $tab[45]['massiveaction'] = false;
+//      $tab[45]['nosearch']      = true;
 
       $tab[64]['table']         = 'glpi_users';
       $tab[64]['field']         = 'name';
@@ -1880,11 +1880,11 @@ class Ticket extends CommonITILObject {
 
       $tab['sla'] = $LANG['sla'][1];
 
-      $tab[30]['table']         = 'glpi_slas';
-      $tab[30]['field']         = 'name';
-      $tab[30]['name']          = $LANG['sla'][1];
-      $tab[30]['massiveaction'] = false;
-      $tab[30]['datatype']      = 'dropdown';
+//      $tab[30]['table']         = 'glpi_slas';
+//      $tab[30]['field']         = 'name';
+//      $tab[30]['name']          = $LANG['sla'][1];
+//      $tab[30]['massiveaction'] = false;
+//      $tab[30]['datatype']      = 'dropdown';
 
       $tab[32]['table']         = 'glpi_slalevels';
       $tab[32]['field']         = 'name';
@@ -1941,7 +1941,7 @@ class Ticket extends CommonITILObject {
 
       $tab[58]['table']         = 'glpi_users';
       $tab[58]['field']         = 'name';
-      $tab[58]['name']          = $LANG['validation'][0]." - ".$LANG['job'][4];
+//      $tab[58]['name']          = $LANG['validation'][0]." - ".$LANG['job'][4];
       $tab[58]['datatype']      = 'itemlink';
       $tab[58]['itemlink_type'] = 'User';
       $tab[58]['forcegroupby']  = true;
