@@ -888,8 +888,8 @@ $LANG['install'][104]="mbstring extension test";
 $LANG['install'][105]="Mbstring extension of your parser PHP is not installed"; 
 $LANG['install'][106]="Checking write permissions for graphic files"; 
 
-$LANG['job'][1]="Incident"; 
-$LANG['job'][2]="Request"; 
+$LANG['job'][1]="Breakdown"; 
+$LANG['job'][2]="Calibration"; 
 $LANG['job'][3]="Technicians"; 
 $LANG['job'][4]="Requester"; 
 $LANG['job'][5]="Assigned to"; 
