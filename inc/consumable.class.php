@@ -577,14 +577,14 @@ class Consumable extends CommonDBTM {
             echo self::getCount($tID, -1);
             echo "</th></tr>";
          } else { // Old
-            echo "<tr><th colspan='".($canedit?'8':'6')."'>".$LANG['consumables'][35]."</th></tr>";
+//            echo "<tr><th colspan='".($canedit?'8':'6')."'>".$LANG['consumables'][35]."</th></tr>";
          }
          $i = 0;
          echo "<tr><th>".$LANG['common'][2]."</th><th>".$LANG['consumables'][23]."</th>";
          echo "<th>".$LANG['cartridges'][24]."</th>";
          if ($show_old) {
-            echo "<th>".$LANG['consumables'][26]."</th>";
-            echo "<th>".$LANG['consumables'][31]."</th>";
+//            echo "<th>".$LANG['consumables'][26]."</th>";
+//            echo "<th>".$LANG['consumables'][31]."</th>";
          }
          echo "<th width='200px'>".$LANG['financial'][3]."</th>";
 
