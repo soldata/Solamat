@@ -914,15 +914,15 @@ class Infocom extends CommonDBChild {
             Html::showDateFormItem("buy_date", $ic->fields["buy_date"], true, $editcalendar);
             echo "</td></tr>";
 
-    /*      echo "<tr class='tab_bg_1'>";
-            echo "<td>".$LANG['financial'][82]."&nbsp;:</td>";
+          echo "<tr class='tab_bg_1'>";
+            echo "<td>".$LANG['ocsng'][68]."&nbsp;:</td>";
             echo "<td>";
             Html::autocompletionTextField($ic, "bill", array('option' => $option));
             echo "</td>";
-            echo "<td>".$LANG['financial'][27]."&nbsp;:</td><td>";
+     /*       echo "<td>".$LANG['financial'][27]."&nbsp;:</td><td>";
             Html::showDateFormItem("delivery_date", $ic->fields["delivery_date"], true,
-                                   $editcalendar);
-            echo "</td></tr>";*/
+                                   $editcalendar);*/
+            echo "</td></tr>";
 
             echo "<tr class='tab_bg_1'>";
             echo "<td>".$LANG['financial'][19]."&nbsp;:</td><td>";
