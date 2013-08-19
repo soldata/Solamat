@@ -1678,11 +1678,12 @@ class User extends CommonDBTM {
             Dropdown::showFromArray("profiles_id", $options,
                                     array('value' => $this->fields["profiles_id"]));
 
-            echo "<td>" .  $LANG['profiles'][37] . "&nbsp;: </td><td>";
+            echo "</tr>";
+                echo "<td>" .  $LANG['profiles'][37] . "&nbsp;: </td><td>";
             $entities = Profile_User::getUserEntities($this->fields['id'],1);
             Dropdown::show('Entity', array('value'  => $this->fields["entities_id"],
                                            'entity' => $entities));
-            echo "</td></tr>";
+            echo "</td>";
          }
 
          echo "<tr class='tab_bg_1'>";
