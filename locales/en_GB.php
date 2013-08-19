@@ -1486,7 +1486,7 @@ $LANG['pager'][5]="items";
 $LANG['pager'][6]="from"; 
 $LANG['pager'][7]="to"; 
 
-$LANG['peripherals'][18]="Brand"; 
+$LANG['peripherals'][18]="Imputation number"; 
 $LANG['peripherals'][31]="Global management"; 
 $LANG['peripherals'][32]="Unit management"; 
 $LANG['peripherals'][33]="Management Type"; 

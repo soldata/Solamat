@@ -212,7 +212,7 @@ class EntityData extends CommonDBChild {
       echo "<tr><th colspan='4'>".$LANG['financial'][44]."</th></tr>";
 
       echo "<tr class='tab_bg_1'>";
-      echo "<td>".$LANG['help'][35]."&nbsp;:&nbsp;</td>";
+      echo "<td>".$LANG['peripherals'][18]."&nbsp;:&nbsp;</td>";
       echo "<td>";
       Html::autocompletionTextField($entdata, "phonenumber");
       echo "</td>";
