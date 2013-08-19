@@ -3008,195 +3008,195 @@ class Transfer extends CommonDBTM {
          echo "</td></tr>";
       }
 
-      if ($edit_form) {
-         echo "<tr class='tab_bg_1'>";
-         echo "<td>".$LANG['common'][16]."&nbsp;:</td><td>";
-         Html::autocompletionTextField($this, "name");
-         echo "</td>";
-         echo "<td rowspan='3' class='middle right'>".$LANG['common'][25]."&nbsp;: </td>";
-         echo "<td class='center middle' rowspan='3'>
-               <textarea cols='45' rows='3' name='comment' >".$this->fields["comment"]."</textarea>";
-         echo "</td></tr>";
-
-         echo "<tr class='tab_bg_1'>";
-         echo "<td>".$LANG['common'][26]."&nbsp;: </td>";
-         echo "<td>".($this->fields["date_mod"] ? Html::convDateTime($this->fields["date_mod"])
-                                                : $LANG['setup'][307]);
-         echo "</td></tr>";
-      }
-
+//      if ($edit_form) {
+//         echo "<tr class='tab_bg_1'>";
+//         echo "<td>".$LANG['common'][16]."&nbsp;:</td><td>";
+//         Html::autocompletionTextField($this, "name");
+//         echo "</td>";
+//         echo "<td rowspan='3' class='middle right'>".$LANG['common'][25]."&nbsp;: </td>";
+//         echo "<td class='center middle' rowspan='3'>
+//               <textarea cols='45' rows='3' name='comment' >".$this->fields["comment"]."</textarea>";
+//         echo "</td></tr>";
+//
+//         echo "<tr class='tab_bg_1'>";
+//         echo "<td>".$LANG['common'][26]."&nbsp;: </td>";
+//         echo "<td>".($this->fields["date_mod"] ? Html::convDateTime($this->fields["date_mod"])
+//                                                : $LANG['setup'][307]);
+//         echo "</td></tr>";
+//      }
+//
       $keep  = array(0 => $LANG['buttons'][6],
                      1 => $LANG['buttons'][49]);
-
-      $clean = array(0 => $LANG['buttons'][49],
-                     1 => $LANG['buttons'][6],
-                     2 => $LANG['buttons'][22]);
-
-      echo "<tr class='tab_bg_1'>";
-      echo "<td>".$LANG['common'][66]." -> ".$LANG['title'][38]."&nbsp;:</td><td>";
-      $params['value'] = $this->fields['keep_history'];
-      Dropdown::showFromArray('keep_history', $keep,$params);
-      echo "</td>";
-      if (!$edit_form) {
-         echo "<td colspan='2'>&nbsp;</td>";
-      }
-      echo "</tr>";
-
-      echo "<tr class='tab_bg_2'>";
-      echo "<td colspan='4' class='center b'>".$LANG['Menu'][38]."</td></tr>";
-
-      echo "<tr class='tab_bg_1'>";
-      echo "<td>".$LANG['common'][66]." -> ".$LANG['networking'][6]."&nbsp;:</td><td>";
-      $options = array(0 => $LANG['buttons'][6],
-                       1 => $LANG['buttons'][49]." - ".$LANG['buttons'][10] ,
-                       2 => $LANG['buttons'][49]." - ".$LANG['buttons'][9] );
-      $params['value'] = $this->fields['keep_networklink'];
-      Dropdown::showFromArray('keep_networklink',$options,$params);
-      echo "</td>";
-      echo "<td>".$LANG['common'][66]." -> ".$LANG['title'][28]."&nbsp;:</td><td>";
-      $options = array(0 => $LANG['buttons'][6],
-                       1 => $LANG['buttons'][49]." - ".$LANG['buttons'][10] ,
-                       2 => $LANG['buttons'][49]." - ".$LANG['buttons'][48] );
-      $params['value'] = $this->fields['keep_ticket'];
-      Dropdown::showFromArray('keep_ticket',$options,$params);
-      echo "</td></tr>";
-
-      echo "<tr class='tab_bg_1'>";
-      echo "<td>".$LANG["Menu"][0]." -> ".$LANG["Menu"][4]."&nbsp;:</td><td>";
-      $params['value'] = $this->fields['keep_software'];
-      Dropdown::showFromArray('keep_software', $keep,$params);
-      echo "</td>";
-      echo "<td>".$LANG["Menu"][4]." (".$LANG['transfer'][3].")&nbsp;:</td><td>";
-      $params['value'] = $this->fields['clean_software'];
-      Dropdown::showFromArray('clean_software', $clean,$params);
-      echo "</td></tr>";
-
-      echo "<tr class='tab_bg_1'>";
-      echo "<td>".$LANG['common'][66]." -> ".$LANG['Menu'][17]."&nbsp;:</td><td>";
-      $params['value'] = $this->fields['keep_reservation'];
-      Dropdown::showFromArray('keep_reservation',$keep, $params);
-      echo "</td>";
-      echo "<td>".$LANG["Menu"][0]." -> ".Toolbox::ucfirst($LANG['log'][18])."&nbsp;:</td><td>";
-      $params['value'] = $this->fields['keep_device'];
-      Dropdown::showFromArray('keep_device',$keep, $params);
-      echo "</td></tr>";
-
-      echo "<tr class='tab_bg_1'>";
-      echo "<td>".$LANG["Menu"][2]." -> ".$LANG["Menu"][21]." / ".$LANG['cartridges'][12]."&nbsp;:".
-            "</td><td>";
-      $params['value'] = $this->fields['keep_cartridgeitem'];
-      Dropdown::showFromArray('keep_cartridgeitem', $keep, $params);
-      echo "</td>";
-      echo "<td>".$LANG['cartridges'][12]." (".$LANG['transfer'][3].")&nbsp;:</td><td>";
-      $params['value'] = $this->fields['clean_cartridgeitem'];
-      Dropdown::showFromArray('clean_cartridgeitem', $clean, $params);
-      echo "</td></tr>";
-
-      echo "<tr class='tab_bg_1'>";
-      echo "<td>".$LANG['cartridges'][12]." -> ".$LANG["Menu"][21]."&nbsp;:</td><td>";
-      $params['value'] = $this->fields['keep_cartridge'];
-      Dropdown::showFromArray('keep_cartridge', $keep, $params);
-      echo "</td>";
+//
+//      $clean = array(0 => $LANG['buttons'][49],
+//                     1 => $LANG['buttons'][6],
+//                     2 => $LANG['buttons'][22]);
+//
+//      echo "<tr class='tab_bg_1'>";
+//      echo "<td>".$LANG['common'][66]." -> ".$LANG['title'][38]."&nbsp;:</td><td>";
+//      $params['value'] = $this->fields['keep_history'];
+//      Dropdown::showFromArray('keep_history', $keep,$params);
+//      echo "</td>";
+//      if (!$edit_form) {
+//         echo "<td colspan='2'>&nbsp;</td>";
+//      }
+//      echo "</tr>";
+//
+//      echo "<tr class='tab_bg_2'>";
+//      echo "<td colspan='4' class='center b'>".$LANG['Menu'][38]."</td></tr>";
+//
+//      echo "<tr class='tab_bg_1'>";
+//      echo "<td>".$LANG['common'][66]." -> ".$LANG['networking'][6]."&nbsp;:</td><td>";
+//      $options = array(0 => $LANG['buttons'][6],
+//                       1 => $LANG['buttons'][49]." - ".$LANG['buttons'][10] ,
+//                       2 => $LANG['buttons'][49]." - ".$LANG['buttons'][9] );
+//      $params['value'] = $this->fields['keep_networklink'];
+//      Dropdown::showFromArray('keep_networklink',$options,$params);
+//      echo "</td>";
+//      echo "<td>".$LANG['common'][66]." -> ".$LANG['title'][28]."&nbsp;:</td><td>";
+//      $options = array(0 => $LANG['buttons'][6],
+//                       1 => $LANG['buttons'][49]." - ".$LANG['buttons'][10] ,
+//                       2 => $LANG['buttons'][49]." - ".$LANG['buttons'][48] );
+//      $params['value'] = $this->fields['keep_ticket'];
+//      Dropdown::showFromArray('keep_ticket',$options,$params);
+//      echo "</td></tr>";
+//
+//      echo "<tr class='tab_bg_1'>";
+//      echo "<td>".$LANG["Menu"][0]." -> ".$LANG["Menu"][4]."&nbsp;:</td><td>";
+//      $params['value'] = $this->fields['keep_software'];
+//      Dropdown::showFromArray('keep_software', $keep,$params);
+//      echo "</td>";
+//      echo "<td>".$LANG["Menu"][4]." (".$LANG['transfer'][3].")&nbsp;:</td><td>";
+//      $params['value'] = $this->fields['clean_software'];
+//      Dropdown::showFromArray('clean_software', $clean,$params);
+//      echo "</td></tr>";
+//
+//      echo "<tr class='tab_bg_1'>";
+//      echo "<td>".$LANG['common'][66]." -> ".$LANG['Menu'][17]."&nbsp;:</td><td>";
+//      $params['value'] = $this->fields['keep_reservation'];
+//      Dropdown::showFromArray('keep_reservation',$keep, $params);
+//      echo "</td>";
+//      echo "<td>".$LANG["Menu"][0]." -> ".Toolbox::ucfirst($LANG['log'][18])."&nbsp;:</td><td>";
+//      $params['value'] = $this->fields['keep_device'];
+//      Dropdown::showFromArray('keep_device',$keep, $params);
+//      echo "</td></tr>";
+//
+//      echo "<tr class='tab_bg_1'>";
+//      echo "<td>".$LANG["Menu"][2]." -> ".$LANG["Menu"][21]." / ".$LANG['cartridges'][12]."&nbsp;:".
+//            "</td><td>";
+//      $params['value'] = $this->fields['keep_cartridgeitem'];
+//      Dropdown::showFromArray('keep_cartridgeitem', $keep, $params);
+//      echo "</td>";
+//      echo "<td>".$LANG['cartridges'][12]." (".$LANG['transfer'][3].")&nbsp;:</td><td>";
+//      $params['value'] = $this->fields['clean_cartridgeitem'];
+//      Dropdown::showFromArray('clean_cartridgeitem', $clean, $params);
+//      echo "</td></tr>";
+//
+//      echo "<tr class='tab_bg_1'>";
+//      echo "<td>".$LANG['cartridges'][12]." -> ".$LANG["Menu"][21]."&nbsp;:</td><td>";
+//      $params['value'] = $this->fields['keep_cartridge'];
+//      Dropdown::showFromArray('keep_cartridge', $keep, $params);
+//      echo "</td>";
       echo "<td>".$LANG['common'][66]." -> ".$LANG['financial'][3]."&nbsp;:</td><td>";
       $params['value'] = $this->fields['keep_infocom'];
       Dropdown::showFromArray('keep_infocom', $keep, $params);
       echo "</td></tr>";
 
-      echo "<tr class='tab_bg_1'>";
-      echo "<td>".$LANG['setup'][92]." -> ".$LANG["Menu"][32]."&nbsp;:</td><td>";
-      $params['value'] = $this->fields['keep_consumable'];
-      Dropdown::showFromArray('keep_consumable', $keep, $params);
-      echo "</td>";
-      echo "<td>".$LANG["Menu"][0]." -> ".$LANG['computers'][8]."&nbsp;:</td><td>";
-      $params['value'] = $this->fields['keep_disk'];
-      Dropdown::showFromArray('keep_disk', $keep, $params);
-      echo "</td></tr>";
-
-      echo "<tr class='tab_bg_2'>";
-      echo "<td colspan='4' class='center b'>".$LANG['connect'][0]."</td></tr>";
-
-      echo "<tr class='tab_bg_1'>";
-      echo "<td>".$LANG["Menu"][3]."&nbsp;:</td><td>";
-      $params['value'] = $this->fields['keep_dc_monitor'];
-      Dropdown::showFromArray('keep_dc_monitor', $keep, $params);
-      echo "</td>";
-      echo "<td>".$LANG["Menu"][3]." (".$LANG['transfer'][3].")&nbsp;:</td><td>";
-      $params['value'] = $this->fields['clean_dc_monitor'];
-      Dropdown::showFromArray('clean_dc_monitor', $clean, $params);
-      echo "</td></tr>";
-
-      echo "<tr class='tab_bg_1'>";
-      echo "<td>".$LANG["Menu"][2]."&nbsp;:</td><td>";
-      $params['value'] = $this->fields['keep_dc_printer'];
-      Dropdown::showFromArray('keep_dc_printer', $keep, $params);
-      echo "</td>";
-      echo "<td>".$LANG["Menu"][2]." (".$LANG['transfer'][3].")&nbsp;:</td><td>";
-      $params['value'] = $this->fields['clean_dc_printer'];
-      Dropdown::showFromArray('clean_dc_printer', $clean, $params);
-      echo "</td></tr>";
-
-      echo "<tr class='tab_bg_1'>";
-      echo "<td>".$LANG["Menu"][16]."&nbsp;:</td><td>";
-      $params['value'] = $this->fields['keep_dc_peripheral'];
-      Dropdown::showFromArray('keep_dc_peripheral', $keep, $params);
-      echo "</td>";
-      echo "<td>".$LANG["Menu"][16]." (".$LANG['transfer'][3].")&nbsp;:</td><td>";
-      $params['value']=$this->fields['clean_dc_peripheral'];
-      Dropdown::showFromArray('clean_dc_peripheral', $clean, $params);
-      echo "</td></tr>";
-
-      echo "<tr class='tab_bg_1'>";
-      echo "<td>".$LANG["Menu"][34]."&nbsp;:</td><td>";
-      $params['value'] = $this->fields['keep_dc_phone'];
-      Dropdown::showFromArray('keep_dc_phone', $keep, $params);
-      echo "</td>";
-      echo "<td>".$LANG["Menu"][34]." (".$LANG['transfer'][3].")&nbsp;:</td><td>";
-      $params['value'] = $this->fields['clean_dc_phone'];
-      Dropdown::showFromArray('clean_dc_phone', $clean, $params);
-      echo "</td></tr>";
-
-      echo "<tr class='tab_bg_2'>";
-      echo "<td colspan='4' class='center b'>".$LANG["Menu"][26]."</td></tr>";
-
-      echo "<tr class='tab_bg_1'>";
-      echo "<td>".$LANG['common'][66]." -> ".$LANG["Menu"][23]."&nbsp;:</td><td>";
-      $params['value'] = $this->fields['keep_supplier'];
-      Dropdown::showFromArray('keep_supplier', $keep, $params);
-      echo "</td>";
-      echo "<td>".$LANG["Menu"][23]." (".$LANG['transfer'][3].")&nbsp;:</td><td>";
-      $params['value'] = $this->fields['clean_supplier'];
-      Dropdown::showFromArray('clean_supplier', $clean, $params);
-      echo "</td></tr>";
-
-      echo "<tr class='tab_bg_1'>";
-      echo "<td>".$LANG["Menu"][23]." -> ".$LANG["Menu"][22]."&nbsp;:</td><td>";
-      $params['value'] = $this->fields['keep_contact'];
-      Dropdown::showFromArray('keep_contact', $keep, $params);
-      echo "</td>";
-      echo "<td>".$LANG["Menu"][22]." (".$LANG['transfer'][3].")&nbsp;:</td><td>";
-      $params['value'] = $this->fields['clean_contact'];
-      Dropdown::showFromArray('clean_contact', $clean, $params);
-      echo "</td></tr>";
-
+//      echo "<tr class='tab_bg_1'>";
+//      echo "<td>".$LANG['setup'][92]." -> ".$LANG["Menu"][32]."&nbsp;:</td><td>";
+//      $params['value'] = $this->fields['keep_consumable'];
+//      Dropdown::showFromArray('keep_consumable', $keep, $params);
+//      echo "</td>";
+//      echo "<td>".$LANG["Menu"][0]." -> ".$LANG['computers'][8]."&nbsp;:</td><td>";
+//      $params['value'] = $this->fields['keep_disk'];
+//      Dropdown::showFromArray('keep_disk', $keep, $params);
+//      echo "</td></tr>";
+//
+//      echo "<tr class='tab_bg_2'>";
+//      echo "<td colspan='4' class='center b'>".$LANG['connect'][0]."</td></tr>";
+//
+//      echo "<tr class='tab_bg_1'>";
+//      echo "<td>".$LANG["Menu"][3]."&nbsp;:</td><td>";
+//      $params['value'] = $this->fields['keep_dc_monitor'];
+//      Dropdown::showFromArray('keep_dc_monitor', $keep, $params);
+//      echo "</td>";
+//      echo "<td>".$LANG["Menu"][3]." (".$LANG['transfer'][3].")&nbsp;:</td><td>";
+//      $params['value'] = $this->fields['clean_dc_monitor'];
+//      Dropdown::showFromArray('clean_dc_monitor', $clean, $params);
+//      echo "</td></tr>";
+//
+//      echo "<tr class='tab_bg_1'>";
+//      echo "<td>".$LANG["Menu"][2]."&nbsp;:</td><td>";
+//      $params['value'] = $this->fields['keep_dc_printer'];
+//      Dropdown::showFromArray('keep_dc_printer', $keep, $params);
+//      echo "</td>";
+//      echo "<td>".$LANG["Menu"][2]." (".$LANG['transfer'][3].")&nbsp;:</td><td>";
+//      $params['value'] = $this->fields['clean_dc_printer'];
+//      Dropdown::showFromArray('clean_dc_printer', $clean, $params);
+//      echo "</td></tr>";
+//
+//      echo "<tr class='tab_bg_1'>";
+//      echo "<td>".$LANG["Menu"][16]."&nbsp;:</td><td>";
+//      $params['value'] = $this->fields['keep_dc_peripheral'];
+//      Dropdown::showFromArray('keep_dc_peripheral', $keep, $params);
+//      echo "</td>";
+//      echo "<td>".$LANG["Menu"][16]." (".$LANG['transfer'][3].")&nbsp;:</td><td>";
+//      $params['value']=$this->fields['clean_dc_peripheral'];
+//      Dropdown::showFromArray('clean_dc_peripheral', $clean, $params);
+//      echo "</td></tr>";
+//
+//      echo "<tr class='tab_bg_1'>";
+//      echo "<td>".$LANG["Menu"][34]."&nbsp;:</td><td>";
+//      $params['value'] = $this->fields['keep_dc_phone'];
+//      Dropdown::showFromArray('keep_dc_phone', $keep, $params);
+//      echo "</td>";
+//      echo "<td>".$LANG["Menu"][34]." (".$LANG['transfer'][3].")&nbsp;:</td><td>";
+//      $params['value'] = $this->fields['clean_dc_phone'];
+//      Dropdown::showFromArray('clean_dc_phone', $clean, $params);
+//      echo "</td></tr>";
+//
+//      echo "<tr class='tab_bg_2'>";
+//      echo "<td colspan='4' class='center b'>".$LANG["Menu"][26]."</td></tr>";
+//
+//      echo "<tr class='tab_bg_1'>";
+//      echo "<td>".$LANG['common'][66]." -> ".$LANG["Menu"][23]."&nbsp;:</td><td>";
+//      $params['value'] = $this->fields['keep_supplier'];
+//      Dropdown::showFromArray('keep_supplier', $keep, $params);
+//      echo "</td>";
+//      echo "<td>".$LANG["Menu"][23]." (".$LANG['transfer'][3].")&nbsp;:</td><td>";
+//      $params['value'] = $this->fields['clean_supplier'];
+//      Dropdown::showFromArray('clean_supplier', $clean, $params);
+//      echo "</td></tr>";
+//
+//      echo "<tr class='tab_bg_1'>";
+//      echo "<td>".$LANG["Menu"][23]." -> ".$LANG["Menu"][22]."&nbsp;:</td><td>";
+//      $params['value'] = $this->fields['keep_contact'];
+//      Dropdown::showFromArray('keep_contact', $keep, $params);
+//      echo "</td>";
+//      echo "<td>".$LANG["Menu"][22]." (".$LANG['transfer'][3].")&nbsp;:</td><td>";
+//      $params['value'] = $this->fields['clean_contact'];
+//      Dropdown::showFromArray('clean_contact', $clean, $params);
+//      echo "</td></tr>";
+//
       echo "<tr class='tab_bg_1'>";
       echo "<td>".$LANG['common'][66]." -> ".$LANG["Menu"][27]."&nbsp;:</td><td>";
       $params['value'] = $this->fields['keep_document'];
       Dropdown::showFromArray('keep_document', $keep, $params);
       echo "</td>";
-      echo "<td>".$LANG["Menu"][27]." (".$LANG['transfer'][3].")&nbsp;:</td><td>";
-      $params['value'] = $this->fields['clean_document'];
-      Dropdown::showFromArray('clean_document', $clean, $params);
-      echo "</td></tr>";
-
-      echo "<tr class='tab_bg_1'>";
-      echo "<td>".$LANG['common'][66]." -> ".$LANG["Menu"][25]."&nbsp;:</td><td>";
-      $params['value'] = $this->fields['keep_contract'];
-      Dropdown::showFromArray('keep_contract', $keep, $params);
-      echo "</td>";
-      echo "<td>".$LANG["Menu"][25]." (".$LANG['transfer'][3].")&nbsp;:</td><td>";
-      $params['value'] = $this->fields['clean_contract'];
-      Dropdown::showFromArray('clean_contract', $clean, $params);
-      echo "</td></tr>";
+//      echo "<td>".$LANG["Menu"][27]." (".$LANG['transfer'][3].")&nbsp;:</td><td>";
+//      $params['value'] = $this->fields['clean_document'];
+//      Dropdown::showFromArray('clean_document', $clean, $params);
+//      echo "</td></tr>";
+//
+//      echo "<tr class='tab_bg_1'>";
+//      echo "<td>".$LANG['common'][66]." -> ".$LANG["Menu"][25]."&nbsp;:</td><td>";
+//      $params['value'] = $this->fields['keep_contract'];
+//      Dropdown::showFromArray('keep_contract', $keep, $params);
+//      echo "</td>";
+//      echo "<td>".$LANG["Menu"][25]." (".$LANG['transfer'][3].")&nbsp;:</td><td>";
+//      $params['value'] = $this->fields['clean_contract'];
+//      Dropdown::showFromArray('clean_contract', $clean, $params);
+//      echo "</td></tr>";
 
       if ($edit_form) {
          $this->showFormButtons($options);
