@@ -76,7 +76,7 @@ if (isset($_POST["add_several"])) {
       if (isset($_POST["out"])) {
          foreach ($_POST["out"] as $key => $val) {
 //            $con->out($key,$_POST['itemtype'],$_POST["items_id"]);
-$con->transfertBatch($key, $_POST['entities_id']);
+		$con->transfertBatch($key, $_POST['entities_id']);
          }
       }
 //      $item = new $_POST['itemtype']();
