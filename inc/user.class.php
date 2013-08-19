@@ -1621,9 +1621,10 @@ class User extends CommonDBTM {
       UserEmail::showForUser($this);
       echo "</td>";
 
-      echo "<td>" . $LANG['users'][2] . "&nbsp;:</td><td>";
-      Dropdown::show('UserCategory', array('value' => $this->fields["usercategories_id"]));
-      echo "</td></tr>";
+//      echo "<td>" . $LANG['users'][2] . "&nbsp;:</td><td>";
+//      Dropdown::show('UserCategory', array('value' => $this->fields["usercategories_id"]));
+//      echo "</td>";
+		echo "</tr>";
 
       echo "<tr class='tab_bg_1'><td>" . $LANG['help'][35] . "&nbsp;:</td><td>";
       Html::autocompletionTextField($this, "phone");
@@ -1633,24 +1634,24 @@ class User extends CommonDBTM {
       echo "<textarea cols='45' rows='8' name='comment' >".$this->fields["comment"]."</textarea>";
       echo "</td></tr>";
 
-      echo "<tr class='tab_bg_1'><td>" . $LANG['help'][35] . " 2&nbsp;:</td><td>";
-      Html::autocompletionTextField($this, "phone2");
-      echo "</td></tr>";
+//      echo "<tr class='tab_bg_1'><td>" . $LANG['help'][35] . " 2&nbsp;:</td><td>";
+//      Html::autocompletionTextField($this, "phone2");
+//      echo "</td></tr>";
 
-      echo "<tr class='tab_bg_1'><td>" . $LANG['users'][17] . "&nbsp;:</td><td>";
-      Html::autocompletionTextField($this, "registration_number");
-      echo "</td></tr>";
+//      echo "<tr class='tab_bg_1'><td>" . $LANG['users'][17] . "&nbsp;:</td><td>";
+//      Html::autocompletionTextField($this, "registration_number");
+//      echo "</td></tr>";
 
-      echo "<tr class='tab_bg_1'><td>" . $LANG['users'][1] . "&nbsp;:</td><td>";
-      Dropdown::show('UserTitle', array('value' => $this->fields["usertitles_id"]));
-      echo "</td></tr>";
+//      echo "<tr class='tab_bg_1'><td>" . $LANG['users'][1] . "&nbsp;:</td><td>";
+//      Dropdown::show('UserTitle', array('value' => $this->fields["usertitles_id"]));
+//      echo "</td></tr>";
 
-      echo "<tr class='tab_bg_1'><td>" . $LANG['common'][15] . "&nbsp;:</td><td>";
+//      echo "<tr class='tab_bg_1'><td>" . $LANG['common'][15] . "&nbsp;:</td><td>";
       if (!empty($ID)) {
          $entities = Profile_User::getUserEntities($ID, true);
          if (count($entities) > 0) {
-            Dropdown::show('Location', array('value'  => $this->fields["locations_id"],
-                                             'entity' => $entities));
+//            Dropdown::show('Location', array('value'  => $this->fields["locations_id"],
+//                                             'entity' => $entities));
          } else {
             echo "&nbsp;";
          }
