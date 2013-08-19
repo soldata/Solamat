@@ -1645,8 +1645,8 @@ class Dropdown {
 
                case 'Computer' :
                   if ($isadmin) {
-                     $actions['connect_to_computer'] = $LANG['buttons'][9];
-                     $actions['install']             = $LANG['buttons'][4];
+//                     $actions['connect_to_computer'] = $LANG['buttons'][9];
+//                     $actions['install']             = $LANG['buttons'][4];
 
                      if ($CFG_GLPI['use_ocs_mode']) {
 
