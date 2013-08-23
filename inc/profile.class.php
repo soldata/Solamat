@@ -696,6 +696,10 @@ class Profile extends CommonDBTM {
       echo "</td>";
       echo "<td>".$LANG['financial'][87]."&nbsp;:</td><td colspan='3'>";
       self::dropdownNoneReadWrite("budget", $this->fields["budget"], 1, 1, 1);
+	  echo "</td>";
+      echo "<tr class='tab_bg_4'>";
+      echo "<td>".$LANG['Menu'][37]."&nbsp;:</td><td>";
+      self::dropdownNoneReadWrite("entity", $this->fields["entity"], 1,  1,1);
       echo "</td></tr>\n";
 
       // Outils / Tools
@@ -1163,9 +1167,9 @@ class Profile extends CommonDBTM {
 
 
       echo "<tr class='tab_bg_4'>";
-      echo "<td>".$LANG['Menu'][37]."&nbsp;:</td><td>";
-      self::dropdownNoneReadWrite("entity", $this->fields["entity"], 1,  1,1);
-      echo "</td>";
+//      echo "<td>".$LANG['Menu'][37]."&nbsp;:</td><td>";
+//      self::dropdownNoneReadWrite("entity", $this->fields["entity"], 1,  1,1);
+//      echo "</td>";
       echo "<td>".$LANG['transfer'][1]."&nbsp;:</td><td>";
       self::dropdownNoneReadWrite("transfer", $this->fields["transfer"], 1, 1, 1);
       echo "</td>";
