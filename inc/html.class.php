@@ -1070,13 +1070,13 @@ class Html {
       }
 
 
-      if ($showstate) {
-         $menu['inventory']['content']['state']['title']            = $LANG['Menu'][28];
-         $menu['inventory']['content']['state']['shortcut']         = '';
-         $menu['inventory']['content']['state']['page']             = '/front/states.php';
-         $menu['inventory']['content']['state']['links']['search']  = '/front/states.php';
-         $menu['inventory']['content']['state']['links']['summary'] = '/front/states.php?synthese=yes';
-      }
+
+
+
+
+
+
+
 
 
 
@@ -1190,6 +1190,13 @@ class Html {
       // FINANCIAL
       $menu['financial']['title'] = $LANG['Menu'][26];
 
+      if (Session::haveRight("entity","r")) {
+         $menu['financial']['content']['entity']['title']           = $LANG['Menu'][37];
+         $menu['financial']['content']['entity']['shortcut']        = '';
+         $menu['financial']['content']['entity']['page']            = '/front/entity.php';
+         $menu['financial']['content']['entity']['links']['search'] = '/front/entity.php';
+         $menu['financial']['content']['entity']['links']['add']    = "/front/entity.form.php";
+      } 
       if (Session::haveRight("budget", "r")) {
          $menu['financial']['default'] = '/front/budget.php';
 
@@ -1213,10 +1220,10 @@ class Html {
          $menu['financial']['content']['supplier']['links']['search'] = '/front/supplier.php';
 
 
-         $menu['financial']['content']['contact']['title']           = $LANG['Menu'][22];
-         $menu['financial']['content']['contact']['shortcut']        = '';
-         $menu['financial']['content']['contact']['page']            = '/front/contact.php';
-         $menu['financial']['content']['contact']['links']['search'] = '/front/contact.php';
+         
+
+
+
 
          if (Session::haveRight("contact_enterprise", "w")) {
             $menu['financial']['content']['contact']['links']['add']  = '/front/contact.form.php';
@@ -1239,7 +1246,13 @@ class Html {
          }
       }
 
-
+      if ($showstate) {
+         $menu['financial']['content']['state']['title']            = $LANG['Menu'][28];
+         $menu['financial']['content']['state']['shortcut']         = '';
+         $menu['financial']['content']['state']['page']             = '/front/states.php';
+         $menu['financial']['content']['state']['links']['search']  = '/front/states.php';
+         $menu['financial']['content']['state']['links']['summary'] = '/front/states.php?synthese=yes';
+      }
       if (Session::haveRight("document", "r")) {
          $menu['financial']['content']['document']['title']           = $LANG['Menu'][27];
          $menu['financial']['content']['document']['shortcut']        = 'd';
@@ -1254,72 +1267,72 @@ class Html {
 
 
       // UTILS
-      $menu['utils']['title'] = $LANG['Menu'][18];
-
-      $menu['utils']['default'] = '/front/reminder.php';
-
-      if (Session::haveRight('reminder_public', 'r')) {
-         $menu['utils']['content']['reminder']['title']        = $LANG['title'][37];
-      } else {
-         $menu['utils']['content']['reminder']['title']        = $LANG['reminder'][0];
-      }
-      $menu['utils']['content']['reminder']['page']            = '/front/reminder.php';
-      $menu['utils']['content']['reminder']['links']['search'] = '/front/reminder.php';
-      $menu['utils']['content']['reminder']['links']['add']    = '/front/reminder.form.php';
-
-      if (Session::haveRight("knowbase","r") || Session::haveRight("faq","r")) {
-         if (Session::haveRight("knowbase","r")) {
-            $menu['utils']['content']['knowbase']['title']        = $LANG['Menu'][19];
-         } else {
-            $menu['utils']['content']['knowbase']['title']        = $LANG['knowbase'][1];
-         }
-         $menu['utils']['content']['knowbase']['shortcut']        = 'b';
-
-         $menu['utils']['content']['knowbase']['page']            = '/front/knowbaseitem.php';
-         $menu['utils']['content']['knowbase']['links']['search'] = '/front/knowbaseitem.php';
-
-         if (Session::haveRight("knowbase","w") || Session::haveRight("faq","w")) {
-            $menu['utils']['content']['knowbase']['links']['add']
-                                                            = '/front/knowbaseitem.form.php?id=new';
-         }
-      }
-
-
-      if (Session::haveRight("reservation_helpdesk","1")
-          || Session::haveRight("reservation_central","r")) {
-         $menu['utils']['content']['reservation']['title']            = $LANG['Menu'][17];
-         $menu['utils']['content']['reservation']['shortcut']         = 'r';
-
-         $menu['utils']['content']['reservation']['page']             = '/front/reservationitem.php';
-         $menu['utils']['content']['reservation']['links']['search']  = '/front/reservationitem.php';
-         $menu['utils']['content']['reservation']['links']['showall'] = '/front/reservation.php';
-      }
-
-
-      if (Session::haveRight("reports","r")) {
-         $menu['utils']['content']['report']['title']    = $LANG['Menu'][6];
-         $menu['utils']['content']['report']['shortcut'] = 'e';
-         $menu['utils']['content']['report']['page']     = '/front/report.php';
-      }
-
-
-      if ($CFG_GLPI["use_ocs_mode"] && Session::haveRight("ocsng","w")) {
-         $menu['utils']['content']['ocsng']['title']                      = $LANG['ocsconfig'][0];
-         $menu['utils']['content']['ocsng']['page']                       = '/front/ocsng.php';
-
-         $menu['utils']['content']['ocsng']['options']['import']['title'] = $LANG['ocsng'][2];
-         $menu['utils']['content']['ocsng']['options']['import']['page']  = '/front/ocsng.import.php';
-
-         $menu['utils']['content']['ocsng']['options']['sync']['title']   = $LANG['ocsng'][1];
-         $menu['utils']['content']['ocsng']['options']['sync']['page']    = '/front/ocsng.sync.php';
-
-         $menu['utils']['content']['ocsng']['options']['clean']['title']  = $LANG['ocsng'][3];
-         $menu['utils']['content']['ocsng']['options']['clean']['page']   = '/front/ocsng.clean.php';
-
-         $menu['utils']['content']['ocsng']['options']['link']['title']   = $LANG['ocsng'][4];
-         $menu['utils']['content']['ocsng']['options']['link']['page']    = '/front/ocsng.link.php';
-
-      }
+//      $menu['utils']['title'] = $LANG['Menu'][18];
+//
+//      $menu['utils']['default'] = '/front/reminder.php';
+//
+//      if (Session::haveRight('reminder_public', 'r')) {
+//         $menu['utils']['content']['reminder']['title']        = $LANG['title'][37];
+//      } else {
+//         $menu['utils']['content']['reminder']['title']        = $LANG['reminder'][0];
+//      }
+//      $menu['utils']['content']['reminder']['page']            = '/front/reminder.php';
+//      $menu['utils']['content']['reminder']['links']['search'] = '/front/reminder.php';
+//      $menu['utils']['content']['reminder']['links']['add']    = '/front/reminder.form.php';
+//
+//      if (Session::haveRight("knowbase","r") || Session::haveRight("faq","r")) {
+//         if (Session::haveRight("knowbase","r")) {
+//            $menu['utils']['content']['knowbase']['title']        = $LANG['Menu'][19];
+//         } else {
+//            $menu['utils']['content']['knowbase']['title']        = $LANG['knowbase'][1];
+//         }
+//         $menu['utils']['content']['knowbase']['shortcut']        = 'b';
+//
+//         $menu['utils']['content']['knowbase']['page']            = '/front/knowbaseitem.php';
+//         $menu['utils']['content']['knowbase']['links']['search'] = '/front/knowbaseitem.php';
+//
+//         if (Session::haveRight("knowbase","w") || Session::haveRight("faq","w")) {
+//            $menu['utils']['content']['knowbase']['links']['add']
+//                                                            = '/front/knowbaseitem.form.php?id=new';
+//         }
+//      }
+//
+//
+//      if (Session::haveRight("reservation_helpdesk","1")
+//          || Session::haveRight("reservation_central","r")) {
+//         $menu['utils']['content']['reservation']['title']            = $LANG['Menu'][17];
+//         $menu['utils']['content']['reservation']['shortcut']         = 'r';
+//
+//         $menu['utils']['content']['reservation']['page']             = '/front/reservationitem.php';
+//         $menu['utils']['content']['reservation']['links']['search']  = '/front/reservationitem.php';
+//         $menu['utils']['content']['reservation']['links']['showall'] = '/front/reservation.php';
+//      }
+//
+//
+//      if (Session::haveRight("reports","r")) {
+//         $menu['utils']['content']['report']['title']    = $LANG['Menu'][6];
+//         $menu['utils']['content']['report']['shortcut'] = 'e';
+//         $menu['utils']['content']['report']['page']     = '/front/report.php';
+//      }
+//
+//
+//      if ($CFG_GLPI["use_ocs_mode"] && Session::haveRight("ocsng","w")) {
+//         $menu['utils']['content']['ocsng']['title']                      = $LANG['ocsconfig'][0];
+//         $menu['utils']['content']['ocsng']['page']                       = '/front/ocsng.php';
+//
+//         $menu['utils']['content']['ocsng']['options']['import']['title'] = $LANG['ocsng'][2];
+//         $menu['utils']['content']['ocsng']['options']['import']['page']  = '/front/ocsng.import.php';
+//
+//         $menu['utils']['content']['ocsng']['options']['sync']['title']   = $LANG['ocsng'][1];
+//         $menu['utils']['content']['ocsng']['options']['sync']['page']    = '/front/ocsng.sync.php';
+//
+//         $menu['utils']['content']['ocsng']['options']['clean']['title']  = $LANG['ocsng'][3];
+//         $menu['utils']['content']['ocsng']['options']['clean']['page']   = '/front/ocsng.clean.php';
+//
+//         $menu['utils']['content']['ocsng']['options']['link']['title']   = $LANG['ocsng'][4];
+//         $menu['utils']['content']['ocsng']['options']['link']['page']    = '/front/ocsng.link.php';
+//
+//      }
 
 
 
@@ -1389,7 +1402,13 @@ class Html {
 
 
       /// ADMINISTRATION
-      $menu['admin']['title'] = $LANG['Menu'][15];
+      if (Session::haveRight("user","r")) {
+      $menu['admin']['title'] = "";
+      }
+      
+      if (Session::haveRight("user","w")){
+          $menu['admin']['title'] = $LANG['Menu'][15];
+      }
 
       if (Session::haveRight("user","r")) {
          $menu['admin']['default'] = '/front/user.php';
@@ -1422,13 +1441,13 @@ class Html {
       }
 
 
-      if (Session::haveRight("entity","r")) {
-         $menu['admin']['content']['entity']['title']           = $LANG['Menu'][37];
-         $menu['admin']['content']['entity']['shortcut']        = '';
-         $menu['admin']['content']['entity']['page']            = '/front/entity.php';
-         $menu['admin']['content']['entity']['links']['search'] = '/front/entity.php';
-         $menu['admin']['content']['entity']['links']['add']    = "/front/entity.form.php";
-      }
+
+
+
+
+
+
+
 
 
       if (Session::haveRight("rule_ldap","r")
