@@ -318,7 +318,7 @@ $LANG['common'][83]="You don't have permission to perform this action.";
 $LANG['common'][84]="Flag change forbidden. Linked items found."; 
 $LANG['common'][85]="Change visibility in the child entities"; 
 $LANG['common'][86]="You are not allowed to change the visibility flag for child entities."; 
-$LANG['common'][87]="New card"; 
+$LANG['common'][87]="New"; 
 $LANG['common'][88]="Personal"; 
 $LANG['common'][89]="Not installed"; 
 $LANG['common'][90]="Object"; 
@@ -617,7 +617,7 @@ $LANG['dropdown'][33]="Firmwares";
 $LANG['dropdown'][34]="Domains"; 
 
 $LANG['entity'][0]="Entity"; 
-$LANG['entity'][2]="Root entity"; 
+$LANG['entity'][2]="Root"; 
 $LANG['entity'][6]="Automatic user assignment"; 
 $LANG['entity'][7]="tree structure"; 
 $LANG['entity'][8]="By entity"; 
