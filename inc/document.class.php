@@ -349,34 +349,34 @@ class Document extends CommonDBTM {
       echo "<td><input type='file' name='filename' value='".$this->fields["filename"]."' size='39'>";
       echo "</td></tr>";
 
-      echo "<tr class='tab_bg_1'>";
-      echo "<td>".$LANG['document'][36]."&nbsp;:</td>";
-      echo "<td>";
-      $this->showUploadedFilesDropdown("upload_file");
-      echo "</td></tr>";
+//      echo "<tr class='tab_bg_1'>";
+//      echo "<td>".$LANG['document'][36]."&nbsp;:</td>";
+//      echo "<td>";
+//      $this->showUploadedFilesDropdown("upload_file");
+//      echo "</td></tr>";
 
-      echo "<tr class='tab_bg_1'>";
-      echo "<td>".$LANG['document'][33]."&nbsp;:</td>";
-      echo "<td>";
-      Html::autocompletionTextField($this, "link");
-      echo "</td></tr>";
+//      echo "<tr class='tab_bg_1'>";
+//      echo "<td>".$LANG['document'][33]."&nbsp;:</td>";
+//      echo "<td>";
+//      Html::autocompletionTextField($this, "link");
+//      echo "</td></tr>";
 
-      echo "<tr class='tab_bg_1'>";
-      echo "<td>".$LANG['document'][3]."&nbsp;:</td>";
-      echo "<td>";
-      Dropdown::show('DocumentCategory', array('value' => $this->fields["documentcategories_id"]));
-      echo "</td></tr>";
+//      echo "<tr class='tab_bg_1'>";
+//      echo "<td>".$LANG['document'][3]."&nbsp;:</td>";
+//      echo "<td>";
+//      Dropdown::show('DocumentCategory', array('value' => $this->fields["documentcategories_id"]));
+//      echo "</td></tr>";
 
-      echo "<tr class='tab_bg_1'>";
-      echo "<td>".$LANG['document'][4]."&nbsp;:</td>";
-      echo "<td>";
-      Html::autocompletionTextField($this, "mime");
-
-      if ($ID>0) {
-         echo "</td><td>".$LANG['document'][1]."&nbsp;:</td>";
-         echo "<td>".$this->fields["sha1sum"];
-      }
-      echo "</td></tr>";
+//      echo "<tr class='tab_bg_1'>";
+//      echo "<td>".$LANG['document'][4]."&nbsp;:</td>";
+//      echo "<td>";
+//      Html::autocompletionTextField($this, "mime");
+//
+//      if ($ID>0) {
+//         echo "</td><td>".$LANG['document'][1]."&nbsp;:</td>";
+//         echo "<td>".$this->fields["sha1sum"];
+//      }
+//      echo "</td></tr>";
 
       $this->showFormButtons($options);
       $this->addDivForTabs();
