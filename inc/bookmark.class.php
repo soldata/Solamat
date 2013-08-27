@@ -613,9 +613,9 @@ class Bookmark extends CommonDBTM {
               "/front/popup.php?popup=edit_bookmark&amp;type=$type&amp;itemtype=$itemtype&amp;url=".
               rawurlencode($_SERVER["REQUEST_URI"])."' ,'glpipopup', 'height=500, width=".
               (Bookmark::WIDTH+250).", top=100, left=100, scrollbars=yes' );w.focus();\">";
-      echo "<img src='".$CFG_GLPI["root_doc"]."/pics/bookmark_record.png'
-             title=\"".$LANG['buttons'][51]." ".$LANG['bookmark'][1]."\"
-             alt=\"".$LANG['buttons'][51]." ".$LANG['bookmark'][1]."\" class='calendrier'>";
+//      echo "<img src='".$CFG_GLPI["root_doc"]."/pics/bookmark_record.png'
+//             title=\"".$LANG['buttons'][51]." ".$LANG['bookmark'][1]."\"
+//             alt=\"".$LANG['buttons'][51]." ".$LANG['bookmark'][1]."\" class='calendrier'>";
       echo "</a>";
    }
 
