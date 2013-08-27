@@ -2188,8 +2188,8 @@ class Html {
          // Search Item
          if (isset($links['search'])) {
             echo "<li><a href='".$CFG_GLPI["root_doc"].$links['search']."'>";
-            echo "<img src='".$CFG_GLPI["root_doc"]."/pics/menu_search.png' title=\"".
-                   $LANG['buttons'][0]."\" alt=\"".$LANG['buttons'][0]."\"></a></li>";
+//            echo "<img src='".$CFG_GLPI["root_doc"]."/pics/menu_search.png' title=\"".
+//                   $LANG['buttons'][0]."\" alt=\"".$LANG['buttons'][0]."\"></a></li>";
 
          } else {
             echo "<li><img src='".$CFG_GLPI["root_doc"]."/pics/menu_search_off.png' title=\"".
