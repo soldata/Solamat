@@ -1797,9 +1797,9 @@ class User extends CommonDBTM {
          echo "</td>";
 
          if (!GLPI_DEMO_MODE) {
-            echo "<td>" . $LANG['setup'][41] . "&nbsp;:</td><td>";
-            /// Use sesion variable because field in table may be null if same of the global config
-            Dropdown::showLanguages("language", array('value' => $_SESSION["glpilanguage"]));
+//            echo "<td>" . $LANG['setup'][41] . "&nbsp;:</td><td>";
+//            /// Use sesion variable because field in table may be null if same of the global config
+//            Dropdown::showLanguages("language", array('value' => $_SESSION["glpilanguage"]));
          } else {
             echo "<td colspan='2'>&nbsp;";
          }
@@ -1847,14 +1847,15 @@ class User extends CommonDBTM {
          }
          echo "</td></tr>";
 
-         echo "<tr class='tab_bg_1'><td>" . $LANG['help'][35] . " 2 : </td><td>";
-
-         if ($extauth && isset($authtype['phone2_field']) && !empty($authtype['phone2_field'])) {
-            echo $this->fields["phone2"];
-         } else {
-            Html::autocompletionTextField($this, "phone2");
-         }
-         echo "</td>";
+         echo "<tr class='tab_bg_1'>";
+//         echo "<td>" . $LANG['help'][35] . " 2 : </td><td>";
+//
+//         if ($extauth && isset($authtype['phone2_field']) && !empty($authtype['phone2_field'])) {
+//            echo $this->fields["phone2"];
+//         } else {
+//            Html::autocompletionTextField($this, "phone2");
+//         }
+//         echo "</td>";
 
         if (Session::haveRight("config", "w")) {
             echo "<td>" . $LANG['setup'][138] . "&nbsp;:</td><td>";
@@ -1867,11 +1868,11 @@ class User extends CommonDBTM {
          }
          echo "</td></tr>";
 
-         echo "<tr class='tab_bg_1'><td>" . $LANG['common'][15] . "&nbsp;:</td><td colspan='3'>";
-         Dropdown::show('Location', array('value'  => $this->fields["locations_id"],
-                                          'entity' => $entities));
-
-         echo "</td></tr>";
+//         echo "<tr class='tab_bg_1'><td>" . $LANG['common'][15] . "&nbsp;:</td><td colspan='3'>";
+//         Dropdown::show('Location', array('value'  => $this->fields["locations_id"],
+//                                          'entity' => $entities));
+//
+//         echo "</td></tr>";
 
 
          echo "<tr><td class='tab_bg_2 center' colspan='4'>";
