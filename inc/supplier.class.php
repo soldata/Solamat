@@ -133,10 +133,11 @@ class Supplier extends CommonDBTM {
       echo "<td>";
       Html::autocompletionTextField($this, "name");
       echo "</td>";
-      echo "<td>".$LANG['financial'][79]."&nbsp;:</td>";
-      echo "<td>";
-      Dropdown::show('SupplierType', array('value' => $this->fields["suppliertypes_id"]));
-      echo "</td></tr>";
+//      echo "<td>".$LANG['financial'][79]."&nbsp;:</td>";
+//      echo "<td>";
+//      Dropdown::show('SupplierType', array('value' => $this->fields["suppliertypes_id"]));
+//      echo "</td>";
+      echo "</tr>";
 
       echo "<tr class='tab_bg_1'>";
       echo "<td>".$LANG['help'][35]."&nbsp;:</td>";
@@ -180,17 +181,17 @@ class Supplier extends CommonDBTM {
       Html::autocompletionTextField($this, "town", array('size' => 23));
       echo "</td></tr>";
 
-      echo "<tr class='tab_bg_1'>";
-      echo "<td>".$LANG['financial'][102]."&nbsp;:</td>";
-      echo "<td>";
-      Html::autocompletionTextField($this, "state");
-      echo "</td></tr>";
-
-      echo "<tr class='tab_bg_1'>";
-      echo "<td>".$LANG['financial'][103]."&nbsp;:</td>";
-      echo "<td>";
-      Html::autocompletionTextField($this, "country");
-      echo "</td></tr>";
+//      echo "<tr class='tab_bg_1'>";
+//      echo "<td>".$LANG['financial'][102]."&nbsp;:</td>";
+//      echo "<td>";
+//      Html::autocompletionTextField($this, "state");
+//      echo "</td></tr>";
+//
+//      echo "<tr class='tab_bg_1'>";
+//      echo "<td>".$LANG['financial'][103]."&nbsp;:</td>";
+//      echo "<td>";
+//      Html::autocompletionTextField($this, "country");
+//      echo "</td></tr>";
 
       $this->showFormButtons($options);
       $this->addDivForTabs();
