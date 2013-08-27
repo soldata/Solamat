@@ -864,32 +864,32 @@ class Config extends CommonDBTM {
 
          echo "</td></tr>";
 
-         echo "<tr class='tab_bg_1'><th colspan='4'>". $LANG['softwarecategories'][5] ."</th></tr>";
-
-         echo "<tr class='tab_bg_2'>";
-         echo "<td>" . $LANG['softwarecategories'][4]."&nbsp;:</td><td>";
-         Dropdown::showYesNo("is_categorized_soft_expanded", $data["is_categorized_soft_expanded"]);
-         echo "</td><td>" . $LANG['softwarecategories'][3] . "&nbsp;:</td><td>";
-         Dropdown::showYesNo("is_not_categorized_soft_expanded",
-                             $data["is_not_categorized_soft_expanded"]);
-         echo "</td></tr>";
+//         echo "<tr class='tab_bg_1'><th colspan='4'>". $LANG['softwarecategories'][5] ."</th></tr>";
+//
+//         echo "<tr class='tab_bg_2'>";
+//         echo "<td>" . $LANG['softwarecategories'][4]."&nbsp;:</td><td>";
+//         Dropdown::showYesNo("is_categorized_soft_expanded", $data["is_categorized_soft_expanded"]);
+//         echo "</td><td>" . $LANG['softwarecategories'][3] . "&nbsp;:</td><td>";
+//         Dropdown::showYesNo("is_not_categorized_soft_expanded",
+//                             $data["is_not_categorized_soft_expanded"]);
+//         echo "</td></tr>";
       }
 
       // Only for user
-      if (array_key_exists('personal_token', $data)) {
-         echo "<tr class='tab_bg_1'><th colspan='4'>". $LANG['common'][108] ."</th></tr>";
-
-         echo "<tr class='tab_bg_1'><td>" . $LANG['common'][108] . "&nbsp;:";
-         if (!empty($data["personal_token"])) {
-            echo "<br>(".$LANG['users'][18]."&nbsp;".
-                       Html::convDateTime($data["personal_token_date"]).')';
-         }
-
-         echo "</td><td colspan='3'>";
-         echo "<input type='checkbox' name='_reset_personal_token'>&nbsp;".$LANG['buttons'][61];
-         echo "</td></tr>";
-      }
-
+//      if (array_key_exists('personal_token', $data)) {
+//         echo "<tr class='tab_bg_1'><th colspan='4'>". $LANG['common'][108] ."</th></tr>";
+//
+//         echo "<tr class='tab_bg_1'><td>" . $LANG['common'][108] . "&nbsp;:";
+//         if (!empty($data["personal_token"])) {
+//            echo "<br>(".$LANG['users'][18]."&nbsp;".
+//                       Html::convDateTime($data["personal_token_date"]).')';
+//         }
+//
+//         echo "</td><td colspan='3'>";
+//         echo "<input type='checkbox' name='_reset_personal_token'>&nbsp;".$LANG['buttons'][61];
+//         echo "</td></tr>";
+//      }
+//
       echo "<tr class='tab_bg_2'>";
       echo "<td colspan='4' class='center'>";
       echo "<input type='submit' name='update' class='submit' value=\"".$LANG['buttons'][2]."\">";
