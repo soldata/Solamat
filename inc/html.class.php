@@ -2298,8 +2298,8 @@ class Html {
       echo "<a href='#' onClick=\"var w=window.open('".$CFG_GLPI["root_doc"].
              "/front/popup.php?popup=load_bookmark' ,'glpibookmarks', 'height=500, width=".
              (Bookmark::WIDTH+250).", top=100, left=100, scrollbars=yes' );w.focus();\">";
-      echo "<img src='".$CFG_GLPI["root_doc"]."/pics/bookmark.png' title=\"".$LANG['buttons'][52]." ".
-             $LANG['bookmark'][1]."\"  alt=\"".$LANG['buttons'][52]." ".$LANG['bookmark'][1]."\">";
+//      echo "<img src='".$CFG_GLPI["root_doc"]."/pics/bookmark.png' title=\"".$LANG['buttons'][52]." ".
+//             $LANG['bookmark'][1]."\"  alt=\"".$LANG['buttons'][52]." ".$LANG['bookmark'][1]."\">";
       echo "</a></li>";
 
       /// MENU ALL
