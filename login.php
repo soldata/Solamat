@@ -84,7 +84,7 @@ if ($auth->Login($_POST['login_name'], $_POST['login_password'],
       if ($_SESSION['glpiactiveprofile']['create_ticket_on_login'] && empty($REDIRECT)) {
          Html::redirect($CFG_GLPI['root_doc'] . "/front/ticket.form.php");
       }
-      Html::redirect($CFG_GLPI['root_doc'] . "/front/central.php$REDIRECT");
+      Html::redirect($CFG_GLPI['root_doc'] . "/front/computer.php$REDIRECT");
    }
 
 } else {
