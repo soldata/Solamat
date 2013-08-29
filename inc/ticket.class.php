@@ -3799,7 +3799,7 @@ class Ticket extends CommonITILObject {
          echo self::getTicketTypeName($this->fields["type"]);
       }
       echo "</td>";
-    /*  echo "<th width='$colsize3%'>".$LANG['common'][36]."&nbsp;:";
+      echo "<th width='$colsize3%'>".$LANG['common'][36]."&nbsp;:";
       echo $tt->getMandatoryMark('itilcategories_id');
       echo "</th>";
       echo "<td width='$colsize4%'>";
@@ -3843,7 +3843,7 @@ class Ticket extends CommonITILObject {
       } else {
          echo Dropdown::getDropdownName("glpi_itilcategories", $this->fields["itilcategories_id"]);
       }
-      echo "</td>";*/
+      echo "</td>";
       echo "</tr>";
 
       if (!$ID) {
