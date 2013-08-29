@@ -617,7 +617,7 @@ $LANG['dropdown'][33]="Firmwares";
 $LANG['dropdown'][34]="Domains"; 
 
 $LANG['entity'][0]="Entity"; 
-$LANG['entity'][2]="Root"; 
+$LANG['entity'][2]="Soldata Group"; 
 $LANG['entity'][6]="Automatic user assignment"; 
 $LANG['entity'][7]="tree structure"; 
 $LANG['entity'][8]="By entity"; 
