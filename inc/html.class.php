@@ -1247,11 +1247,11 @@ class Html {
       }
 
       if ($showstate) {
-         $menu['financial']['content']['state']['title']            = $LANG['Menu'][28];
-         $menu['financial']['content']['state']['shortcut']         = '';
-         $menu['financial']['content']['state']['page']             = '/front/states.php';
-         $menu['financial']['content']['state']['links']['search']  = '/front/states.php';
-         $menu['financial']['content']['state']['links']['summary'] = '/front/states.php?synthese=yes';
+         $menu['inventory']['content']['state']['title']            = $LANG['Menu'][28];
+         $menu['inventory']['content']['state']['shortcut']         = '';
+         $menu['inventory']['content']['state']['page']             = '/front/states.php';
+         $menu['inventory']['content']['state']['links']['search']  = '/front/states.php';
+         $menu['inventory']['content']['state']['links']['summary'] = '/front/states.php?synthese=yes';
       }
       if (Session::haveRight("document", "r")) {
          $menu['financial']['content']['document']['title']           = $LANG['Menu'][27];
