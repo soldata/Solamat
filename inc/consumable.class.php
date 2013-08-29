@@ -535,7 +535,7 @@ class Consumable extends CommonDBTM {
                 class='submit'>";
          echo "<input type='hidden' name='tID' value='$ID'>\n";
          echo "<span class='small_space'>";
-         Dropdown::showInteger('to_add',1,1,100);
+         Dropdown::showInteger('to_add',1,1,10000);
          echo "</span>&nbsp;";
          echo $LANG['consumables'][16]."</td></tr>";
          echo "</table>";
