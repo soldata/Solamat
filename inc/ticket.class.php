@@ -2368,11 +2368,11 @@ class Ticket extends CommonITILObject {
 
       // To be overridden by class
       $tab = array('new'     => $LANG['joblist'][9],
-                   'assign'  => $LANG['joblist'][18],
-                   'plan'    => $LANG['joblist'][19],
+//                   'assign'  => $LANG['joblist'][18],
+//                   'plan'    => $LANG['joblist'][19],
                    'waiting' => $LANG['joblist'][26],
-                   'solved'  => $LANG['joblist'][32],
-                   'closed'  => $LANG['joblist'][33]);
+                   'solved'  => $LANG['joblist'][32]);
+//                   'closed'  => $LANG['joblist'][33]);
 
       if ($withmetaforsearch) {
          $tab['notold']    = $LANG['joblist'][34];
