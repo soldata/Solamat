@@ -3775,30 +3775,30 @@ class Ticket extends CommonITILObject {
       }
 
       echo "<tr class='tab_bg_1'>";
-      echo "<th width='$colsize1%'>".$LANG['common'][17]."&nbsp;:".$tt->getMandatoryMark('type')."</th>";
-      echo "<td width='$colsize2%'>";
-      // Permit to set type when creating ticket without update right
-      if ($canupdate || !$ID) {
-         $opt = array('value' => $this->fields["type"]);
-         /// Auto submit to load template
-         if (!$ID) {
-            $opt['on_change'] = 'submit()';
-         }
-         $rand = self::dropdownType('type', $opt);
-         if ($ID) {
-            $params = array('type'            => '__VALUE__',
-                            'entity_restrict' => $this->fields['entities_id'],
-                            'value'           => $this->fields['itilcategories_id'],
-                            'currenttype'     => $this->fields['type']);
-
-            Ajax::updateItemOnSelectEvent("dropdown_type$rand", "show_category_by_type",
-                                          $CFG_GLPI["root_doc"]."/ajax/dropdownTicketCategories.php",
-                                          $params);
-         }
-      } else {
-         echo self::getTicketTypeName($this->fields["type"]);
-      }
-      echo "</td>";
+//      echo "<th width='$colsize1%'>".$LANG['common'][17]."&nbsp;:".$tt->getMandatoryMark('type')."</th>";
+//      echo "<td width='$colsize2%'>";
+//      // Permit to set type when creating ticket without update right
+//      if ($canupdate || !$ID) {
+//         $opt = array('value' => $this->fields["type"]);
+//         /// Auto submit to load template
+//         if (!$ID) {
+//            $opt['on_change'] = 'submit()';
+//         }
+//         $rand = self::dropdownType('type', $opt);
+//         if ($ID) {
+//            $params = array('type'            => '__VALUE__',
+//                            'entity_restrict' => $this->fields['entities_id'],
+//                            'value'           => $this->fields['itilcategories_id'],
+//                            'currenttype'     => $this->fields['type']);
+//
+//            Ajax::updateItemOnSelectEvent("dropdown_type$rand", "show_category_by_type",
+//                                          $CFG_GLPI["root_doc"]."/ajax/dropdownTicketCategories.php",
+//                                          $params);
+//         }
+//      } else {
+//         echo self::getTicketTypeName($this->fields["type"]);
+//      }
+//      echo "</td>";
       echo "<th width='$colsize3%'>".$LANG['common'][36]."&nbsp;:";
       echo $tt->getMandatoryMark('itilcategories_id');
       echo "</th>";
